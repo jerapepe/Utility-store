@@ -1,0 +1,405 @@
+{% extends "navegacion.html" %}
+{% block contenido %}
+<style>
+    .card-body>input[type="text"] {
+        border: none;
+        text-align: center;
+        outline: none;
+    }
+</style>
+
+<body>
+    <div class="fondocata">
+        <div class="container">
+            <br>
+            <div class="alert alert-success">
+                <h1 class="text-center">Utiles</h1>
+            </div>
+            <div class="container text-center">
+                <div class="row">
+                    <div class="col-xs-1 col-md-3">
+                        <div class="card">
+                            <form action="/agregar" method="POST" enctype="multipart/form-data">
+                                <img class="card-img-top" title="Accesorios" src="/static/productos/pack utiles.jpg"
+                                    alt="" width="200px" height="200px">
+                                <div class="card-body">
+                                    <input id="name" name="name" type="text" value="Paquete inicial de utiles" readonly>
+                                    <input name="price" type="text" value="$500" readonly>
+                                    <p class="card-text">Descripcion</p>
+                                    <input name="description" type="text" value="Paquete incicial con todo lo que necesitas para estudiar en el instituto
+                            huhuetlahtolli, como por ejemplo, lapices, colores, cuadernos, tijeras, reglas, etc."
+                                        readonly>
+                                    <input type="submit" class="btn btn-large btn-primary"
+                                        class="btn btn-large btn-primary" data-toggle="modal" data-id="1"
+                                        value="Agregar al Carrito">
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <br>
+                    <br>
+                    <div class="col-xs-1 col-md-3">
+                        <div class="card">
+                            <form action="/agregar" method="POST" enctype="multipart/form-data">
+                                <img class="card-img-top" title="Accesorios" src="/static/productos/colores2.jpg" alt=""
+                                    width="200px" height="200px">
+                                <div class="card-body">
+                                    <input id="name" name="name" type="text" value="prismacolor" readonly>
+                                    <input name="price" type="text" value="$50" readonly>
+                                    <input name="description" type="text"
+                                        value="Colores prismacolor de calidad con 24 colores" readonly>
+                                    <input type="submit" class="btn btn-large btn-primary"
+                                        class="btn btn-large btn-primary" data-toggle="modal" data-id="1"
+                                        value="Agregar al Carrito">
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="col-xs-1 col-md-3">
+                        <div class="card">
+                            <form action="/agregar" method="POST" enctype="multipart/form-data">
+                                <img class="card-img-top" title="Accesorios" src="/static/productos/cuadernos.jpg"
+                                    alt="" width="200px" height="200px">
+                                <div class="card-body">
+                                    <input id="name" name="name" type="text" value="Paquete de libretas" readonly>
+                                    <input name="price" type="text" value="$130" readonly>
+                                    <p class="card-text">Descripcion</p>
+                                    <input name="description" type="text" value="Paquete con 5 libretas Scribe profesionales de 100 hojas, cuadro
+                                grande" readonly>
+                                    <input type="submit" class="btn btn-large btn-primary"
+                                        class="btn btn-large btn-primary" data-toggle="modal" data-id="1"
+                                        value="Agregar al Carrito">
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="col-xs-1 col-md-3">
+                        <div class="card">
+                            <form action="/agregar" method="POST" enctype="multipart/form-data">
+                                <img class="card-img-top" title="Accesorios" src="/static/productos/paquete libros.jpg"
+                                    alt="" width="200px" height="200px">
+                                <div class="card-body">
+                                    <input id="name" name="name" type="text" value="Paquete libros 1er año" readonly>
+                                    <input name="price" type="text" value="$150" readonly>
+                                    <p class="card-text">Descripcion</p>
+                                    <input name="description" type="text" value="Con este paquete usted compra los libres de cada una de las
+                                materias impartidas con un unico precio (solo el primer año)" readonly>
+                                    <input type="submit" class="btn btn-large btn-primary"
+                                        class="btn btn-large btn-primary" data-toggle="modal" data-id="1"
+                                        value="Agregar al Carrito">
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="col-xs-1 col-md-3">
+                        <div class="card">
+                            <form action="/agregar" method="POST" enctype="multipart/form-data">
+                                <img class="card-img-top" title="Accesorios" src="/static/productos/paquete libros.jpg"
+                                    alt="" width="200px" height="200px">
+                                <div class="card-body">
+                                    <input id="name" name="name" type="text" value="Paquete libros 2do año" readonly>
+                                    <input name="price" type="text" value="$200" readonly>
+                                    <p class="card-text">Descripcion</p>
+                                    <input name="description" type="text" value="Con este paquete usted compra los libres de cada una de las
+                                materias impartidas con un unico precio (solo el segundo año)" readonly>
+                                    <input type="submit" class="btn btn-large btn-primary"
+                                        class="btn btn-large btn-primary" data-toggle="modal" data-id="1"
+                                        value="Agregar al Carrito">
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="col-xs-1 col-md-3">
+                        <div class="card">
+                            <form action="/agregar" method="POST" enctype="multipart/form-data">
+                                <img class="card-img-top" title="Accesorios" src="/static/productos/paquete libros.jpg"
+                                    alt="" width="200px" height="200px">
+                                <div class="card-body">
+                                    <input id="name" name="name" type="text" value="Paquete libros 3er año" readonly>
+                                    <input name="price" type="text" value="$270" readonly>
+                                    <p class="card-text">Descripcion</p>
+                                    <input name="description" type="text" value="Con este paquete usted compra los libres de cada una de las
+                                materias impartidas con un unico precio (solo el tercer año)" readonly>
+                                    <input type="submit" class="btn btn-large btn-primary"
+                                        class="btn btn-large btn-primary" data-toggle="modal" data-id="1"
+                                        value="Agregar al Carrito">
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="col-xs-1 col-md-3">
+                        <div class="card">
+                            <form action="/agregar" method="POST" enctype="multipart/form-data">
+                                <img class="card-img-top" title="Accesorios" src="/static/productos/paquete libros.jpg"
+                                    alt="" width="200px" height="200px">
+                                <div class="card-body">
+                                    <input id="name" name="name" type="text" value="Paquete libros 4to año" readonly>
+                                    <input name="price" type="text" value="$250" readonly>
+                                    <p class="card-text">Descripcion</p>
+                                    <input name="description" type="text" value="Con este paquete usted compra los libres de cada una de las
+                                materias impartidas con un unico precio (solo el cuarto año)" readonly>
+                                    <input type="submit" class="btn btn-large btn-primary"
+                                        class="btn btn-large btn-primary" data-toggle="modal" data-id="1"
+                                        value="Agregar al Carrito">
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="col-xs-1 col-md-3">
+                        <div class="card">
+                            <form action="/agregar" method="POST" enctype="multipart/form-data">
+                                <img class="card-img-top" title="Accesorios" src="/static/productos/paquete libros.jpg"
+                                    alt="" width="200px" height="200px">
+                                <div class="card-body">
+                                    <input id="name" name="name" type="text" value="Paquete libros 5to año" readonly>
+                                    <input name="price" type="text" value="$300" readonly>
+                                    <p class="card-text">Descripcion</p>
+                                    <input name="description" type="text"
+                                        value="Con este paquete usted compra los libres de cada una de las materias impartidas con un unico precio (solo el quinto año)"
+                                        readonly>
+                                    <input type="submit" class="btn btn-large btn-primary"
+                                        class="btn btn-large btn-primary" data-toggle="modal" data-id="1"
+                                        value="Agregar al Carrito">
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <br><br>
+                    <div class="col-xs-1 col-md-3">
+                        <div class="card">
+                            <form action="/agregar" method="POST" enctype="multipart/form-data">
+                                <img class="card-img-top" title="Accesorios" src="/static/productos/paquete libros.jpg"
+                                    alt="" width="200px" height="200px">
+                                <div class="card-body">
+                                    <input id="name" name="name" type="text" value="Paquete libros 6to año" readonly>
+                                    <input name="price" type="text" value="$300" readonly>
+                                    <p class="card-text">Descripcion</p>
+                                    <input name="description" type="text" value="Con este paquete usted compra los libres de cada una de las
+                                materias impartidas con un unico precio (solo el sexto año)" readonly>
+                                    <input type="submit" class="btn btn-large btn-primary"
+                                        class="btn btn-large btn-primary" data-toggle="modal" data-id="1"
+                                        value="Agregar al Carrito">
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="col-xs-1 col-md-3">
+                        <div class="card">
+                            <form action="/agregar" method="POST" enctype="multipart/form-data">
+                                <img class="card-img-top" title="Accesorios" src="/static/productos/gomassacapuntas.jpg"
+                                    alt="" width="200px" height="200px">
+                                <div class="card-body">
+                                    <input id="name" name="name" type="text" value="Gomas y sacapuntas" readonly>
+                                    <input name="price" type="text" value="$35" readonly>
+                                    <p class="card-text">Descripcion</p>
+                                    <input name="description" type="text"
+                                        value="Paquete que contiene 2 gomas y un sacapuntas de la marca staedtler"
+                                        readonly>
+                                    <input type="submit" class="btn btn-large btn-primary"
+                                        class="btn btn-large btn-primary" data-toggle="modal" data-id="1"
+                                        value="Agregar al Carrito">
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="col-xs-1 col-md-3">
+                        <div class="card">
+                            <form action="/agregar" method="POST" enctype="multipart/form-data">
+                                <img class="card-img-top" title="Accesorios" src="/static/productos/lapicera.jpg" alt=""
+                                    width="200px" height="200px">
+                                <div class="card-body">
+                                    <input id="name" name="name" type="text" value="Lapicera" readonly>
+                                    <input name="price" type="text" value="$20" readonly>
+                                    <p class="card-text">Descripcion</p>
+                                    <input name="description" type="text"
+                                        value="Lapicera transparente de plastico, resistente y de varios colores"
+                                        readonly>
+                                    <input type="submit" class="btn btn-large btn-primary"
+                                        class="btn btn-large btn-primary" data-toggle="modal" data-id="1"
+                                        value="Agregar al Carrito">
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="col-xs-1 col-md-3">
+                        <div class="card">
+                            <form action="/agregar" method="POST" enctype="multipart/form-data">
+                                <img class="card-img-top" title="Accesorios" src="/static/productos/lapices.jpg" alt=""
+                                    width="200px" height="200px">
+                                <div class="card-body">
+                                    <input id="name" name="name" type="text" value="Paquete de lapices" readonly>
+                                    <input name="price" type="text" value="$200" readonly>
+                                    <p class="card-text">Descripcion</p>
+                                    <input name="description" type="text"
+                                        value="Paquete de lapices marca metrico con 5 piezas" readonly>
+                                    <input type="submit" class="btn btn-large btn-primary"
+                                        class="btn btn-large btn-primary" data-toggle="modal" data-id="1"
+                                        value="Agregar al Carrito">
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="col-xs-1 col-md-3">
+                        <div class="card">
+                            <form action="/agregar" method="POST" enctype="multipart/form-data">
+                                <img class="card-img-top" title="Accesorios" src="/static/productos/reglas.jpg"" width="
+                                    200px" height="200px">
+                                <div class="card-body">
+                                    <input id="name" name="name" type="text" value="Paquete de reglas" readonly>
+                                    <input name="price" type="text" value="$60" readonly>
+                                    <p class="card-text">Descripcion</p>
+                                    <input name="description" type="text"
+                                        value="Paquete de reglas fexibles transparete de diversos colores con una regla de 30 cm, 2 escuadres y un transportador."
+                                        readonly>
+                                    <input type="submit" class="btn btn-large btn-primary"
+                                        class="btn btn-large btn-primary" data-toggle="modal" data-id="1"
+                                        value="Agregar al Carrito">
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="col-xs-1 col-md-3">
+                        <div class="card">
+                            <form action="/agregar" method="POST" enctype="multipart/form-data">
+                                <img class="card-img-top" title="Accesorios" src="/static/productos/pritt.jpg" alt=""
+                                    width="200px" height="200px">
+                                <div class="card-body">
+                                    <input id="name" name="name" type="text" value="Pegamento" readonly>
+                                    <input name="price" type="text" value="$40" readonly>
+                                    <p class="card-text">Descripcion</p>
+                                    <input name="description" type="text" value="Paquete de pegamento con un pegamento blanco y un lapiz adhesivo
+                                de la marca kole" readonly>
+                                    <input type="submit" class="btn btn-large btn-primary"
+                                        class="btn btn-large btn-primary" data-toggle="modal" data-id="1"
+                                        value="Agregar al Carrito">
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="col-xs-1 col-md-3">
+                        <div class="card">
+                            <form action="/agregar" method="POST" enctype="multipart/form-data">
+                                <img class="card-img-top" title="Accesorios" src="/static/productos/plumones.jpg" alt=""
+                                    width="200px" height="200px">
+                                <div class="card-body">
+                                    <input id="name" name="name" type="text" value="Plumones pelikan" readonly>
+                                    <input name="price" type="text" value="$80" readonly>
+                                    <p class="card-text">Descripcion</p>
+                                    <input name="description" type="text"
+                                        value="Paquete de pumones pelikan con 24 tonos diferentes." readonly>
+                                    <input type="submit" class="btn btn-large btn-primary"
+                                        class="btn btn-large btn-primary" data-toggle="modal" data-id="1"
+                                        value="Agregar al Carrito">
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <br>
+                </div>
+            </div>
+        </div>
+        <div class="container text-center">
+            <br>
+            <div class="alert alert-success">
+                <h1 class="text-center">Ropa</h1>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-1 col-md-3">
+                        <div class="card">
+                            <form action="/agregar" method="POST" enctype="multipart/form-data">
+                                <img class="card-img-top" title="Ropa" src="/static/productos/camisa uniforme.jpg"
+                                    width="200px" height="200px">
+                                <div class="card-body">
+                                    <input id="name" name="name" type="text" value="Camisa ecoelar" readonly>
+                                    <input name="price" type="text" value="$70" readonly>
+                                    <p class="card-text">Descripcion</p>
+                                    <input name="description" type="text" value="Camisa blanca obligatoria para estudiar en el instituto
+                                huehuetlatolli" readonly>
+                                    <input type="submit" class="btn btn-large btn-primary"
+                                        class="btn btn-large btn-primary" data-toggle="modal" data-id="1"
+                                        value="Agregar al Carrito">
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="col-xs-1 col-md-3">
+                        <div class="card">
+                            <form action="/agregar" method="POST" enctype="multipart/form-data">
+                                <img class="card-img-top" title="Ropa" src="/static/productos/sueter uniforme.jpg"
+                                    width="200px" height="200px">
+                                <div class="card-body">
+                                    <input id="name" name="name" type="text" value="Sueter escolar" readonly>
+                                    <input name="price" type="text" value="$100" readonly>
+                                    <p class="card-text">Descripcion</p>
+                                    <input name="description" type="text"
+                                        value="Sueter azul marino con borde de color, obligatorio para estudiar en el instituto huhuetlahtolli"
+                                        readonly>
+                                    <input type="submit" class="btn btn-large btn-primary"
+                                        class="btn btn-large btn-primary" data-toggle="modal" data-id="1"
+                                        value="Agregar al Carrito">
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="col-xs-1 col-md-3">
+                        <div class="card">
+                            <form action="/agregar" method="POST" enctype="multipart/form-data">
+                                <img class="card-img-top" title="Ropa" src="/static/productos/falda uniforme.jpg"
+                                    width="177px" height="177px">
+                                <div class="card-body">
+                                    <input id="name" name="name" type="text" value="Falda escolar" readonly>
+                                    <input name="price" type="text" value="$60" readonly>
+                                    <p class="card-text">Descripcion</p>
+                                    <input name="description" type="text"
+                                        value="Falda gris bligatorio para estudiar en el instituto huhuetlahtolli"
+                                        readonly>
+                                    <input type="submit" class="btn btn-large btn-primary"
+                                        class="btn btn-large btn-primary" data-toggle="modal" data-id="1"
+                                        value="Agregar al Carrito">
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="col-xs-1 col-md-3">
+                        <div class="card">
+                            <form action="/agregar" method="POST" enctype="multipart/form-data">
+                                <img class="card-img-top" title="Ropa" src="/static/productos/pantalon uniforme.jpg"
+                                    width="200px" height="200px">
+                                <div class="card-body">
+                                    <input id="name" name="name" type="text" value="Pantalon escolar" readonly>
+                                    <input name="price" type="text" value="$50" readonly>
+                                    <p class="card-text">Descripcion</p>
+                                    <input name="description" type="text"
+                                        value="Pantalon gris bligatorio para estudiar en el instituto huhuetlahtolli"
+                                        readonly>
+                                    <input type="submit" class="btn btn-large btn-primary"
+                                        class="btn btn-large btn-primary" data-toggle="modal" data-id="1"
+                                        value="Agregar al Carrito">
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <br>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</div>
+{% endblock %}

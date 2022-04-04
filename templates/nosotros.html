@@ -1,0 +1,88 @@
+{% extends "navegacion.html" %}
+{% block contenido %}
+<style>
+    #fondo4{
+        background: url("static/lupa.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        width: "500";
+        height: "550";
+        position: relative;
+    }
+    .centradoss{
+        margin: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 48px;
+        line-height: 1.5em;
+        text-align: center;
+        font-family: "Brush-Script-MT";
+        letter-spacing: normal;
+    }
+    @font-face {
+        font-family: "Brush-Script-MT";
+        src: url(BRUSHSCI.ttf);
+    }
+    .color_11{
+        color: #ffff;
+    }
+</style>
+<div id="fondo4">
+    <br><br><br>
+    <div class="container">
+        <div>
+            <div class="centradoss">
+                <samp class="color_11">Sobre nosotros.</samp><br>
+            </div>
+            <br><br><br>
+            <br><br><br><br><br><br>
+            <br><br><br><br><br><br>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <br>
+    <br>
+    <div class="alert alert-dark">
+        <h1 class="text-center">Mision</h1>
+    </div>
+    <h3>Somos un colegio que ofrece a la sociedad una propuesta educativa que tiene como objetivo 
+    la formacion integral del alumno (personal, social y transcendente) y una adecuada formacion 
+    acadamica desde Infantil.</h3>
+    <br>
+    <br>
+</div>
+<div class="container">
+    <br>
+    <br>
+    <div class="alert alert-dark">
+        <h1 class="text-center">Vision</h1>
+    </div>
+    <h3>Un Colegio que considere al alumnado el centro de toda su accion educativa, 
+    ayudndole a ser el protagonista activo de su proceso formativo que favorezca la 
+    formacion integral del alumnado contando con su diversidad, fomentando el espiritu de superacion, 
+    cooperacion, respeto, solidaridad, creatividad y sentido de la trascendencia.</h3>
+    <br>
+    <br>
+</div>
+<div class="container">
+    <br>
+    <br>
+    <div class="alert alert-dark">
+        <h1 class="text-center">Valores</h1>
+    </div>
+    <h3>Responsabilidad - Responder a los Problemas y Dificultades de la Escuela que afectan a su desempeño.<br>
+        Honestidad - Ser transparentes a la Hora de Enseñar y Comunicar con Padres, Alumnos y cualquier miembro 
+        de la institución <br>
+        Compromiso - Tener Claro el Objetivo Principal de la Institución que es Enseñar y Generar un Aprendizaje
+         en sus Alumnos. 
+        </h3>
+    <br>
+    <br>
+</div>
+<br>
+<br>
+{% endblock %}

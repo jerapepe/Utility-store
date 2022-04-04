@@ -1,0 +1,36 @@
+{% extends "navegacion.html" %}
+{% block contenido %}
+<div class="fondocata">
+<div class="container">
+
+    <br>
+    <br>
+    <div class="alert alert-dark">
+        <h1 class="text-center">Mi Carrito</h1>
+    </div>
+    <table id="lista-carrito" class="table table-responsive-sm  table-dark">
+        <tr>
+            <th>Numero de pedido</th>
+            <th>Name</th>
+            <th>Descripcion</th>
+            <th>Precio</th>
+        </tr>
+        <tbody>
+            {% for posts_pro in posts_pro %}
+					<tr>
+						<td>{{posts_pro[0]}}</td>
+						<td>{{posts_pro[2]}}</td>
+						<td>{{posts_pro[3]}}</td>
+						<td>{{posts_pro[4]}}</td>
+						<td></td>
+					</tr>
+					{% endfor %}
+
+        </tbody>
+    </table>
+</div>
+<div>
+<br><br><br><br><br><br><br><br><br><br><br><br>
+</div>
+</div>
+{% endblock %}

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro</title>
+    <!--JQUERY-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    
+    <!-- FRAMEWORK BOOTSTRAP para el estilo de la pagina-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    
+    <!-- Los iconos tipo Solid de Fontawesome-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/solid.css">
+    <script src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+
+    <!-- Nuestro css-->
+    <link rel="stylesheet" type="text/css" href="/static/css/login.css">
+</head>
+<body>
+    <div class="body"></div>
+    <div class="modal-dialog text-center">
+        <div class="col-sm-8 main-section">
+            <div class="modal-content">
+                <div class="col-12 user-img">
+                <img src="/static/img/new_avatar.png">
+        </a>
+        <form action="/register" method="POST" enctype="multipart/form-data">
+            <div class="input-group mb-3">
+                <input type="text" name="name" class="form-control" placeholder='Nombre'
+                    aria-label="Recipient's username" aria-describedby="basic-addon2">
+            </div>
+            <div class="input-group mb-3">
+                <input type="text" name="ape" class="form-control" placeholder="Apellido"
+                    aria-label="Recipient's username" aria-describedby="basic-addon2">
+            </div>
+            <div class="input-group mb-3">
+                <input type="text" name="tel" class="form-control" placeholder="Telefono"
+                    aria-label="Recipient's username" aria-describedby="basic-addon2">
+            </div>
+            <div class="input-group mb-3">
+                <input type="text" name="direc" class="form-control" placeholder="Direccion"
+                    aria-label="Recipient's username" aria-describedby="basic-addon2">
+            </div>
+            <div class="input-group mb-3">
+                <input type="text" name="email" class="form-control" placeholder="Email"
+                    aria-label="Recipient's username" aria-describedby="basic-addon2">
+            </div>
+            <div class="input-group mb-3">
+                <input type="password" name="password" class="form-control" placeholder="Contraseña"
+                    aria-label="Recipient's username" aria-describedby="basic-addon2">
+            </div>
+            <button type="submit" class="btn btn-primary"><i class="fas fa-sign-in-alt"></i>  Ingresar </button>
+            <br>
+        </form>
+        <a href="/login">
+            Ya tienes cuenta, inicia sesion.
+        </a>
+    </div>
+</body>
+</html>

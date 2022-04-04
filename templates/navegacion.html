@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instituto Huehuetlahtolli</title>
+    <link rel="icon" type="image/png" href="">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+        crossorigin="anonymous"></script>
+    <style type="text/css">
+        #fondocompleto {
+            background: url("");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+
+        footer {
+            background: #343a40;
+            position: absolute;
+            height: 150px;
+            width: 100%;
+            grid-area: footer;
+        }
+
+        footer .line {
+            display: flex;
+            flex-direction: row;
+            margin: 0 5em;
+        }
+
+        footer .line .about-us h3 {
+            color: #C3C3C3;
+            font-weight: 300;
+            margin: 1.25em 2.5em;
+        }
+
+        footer .line .about-us ul {
+            list-style: none;
+        }
+
+        footer .line .about-us ul li {
+            display: inline;
+            padding-left: 100px;
+            padding-right: 100px;
+        }
+
+        footer .line .about-us ul li a {
+            color: white;
+            font-weight: 300;
+            text-decoration: none;
+        }
+
+        footer .line section {
+            margin: 0 3.125em;
+        }
+
+        footer .line section h3 {
+            color: white;
+            font-size: 2em;
+        }
+
+        footer .line section .social-networks {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        .navbar .nav-item:not(:last-child) {
+            margin-right: 35px;
+        }
+
+        .dropdown-toggle::after {
+            transition: transform 0.15s linear;
+        }
+
+        .show.dropdown .dropdown-toggle::after {
+            transform: translateY(3px);
+        }
+
+        .dropdown-menu {
+            margin-top: 0;
+        }
+
+        .fondocata {
+            background: url(/static/cata.jpg) no-repeat center center fixed;
+            background-size: cover;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="fondocompleto">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+            <a class="navbar-brand" href="/">SCHOOL</a>
+            <button class="navbar-toggler" data-target="#my-nav" data-toggle="collapse" aria-controls="my-nav"
+                aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div id="my-nav" class="collapse navbar-collapse">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="/" id="navbarDropdown1" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Home
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown1">
+                            <a class="dropdown-item" href="/catalogo">Catalogo</a>
+                            <a class="dropdown-item" href="/nosotros">Nosotros</a>
+                            <a class="dropdown-item" href="/carrito">Carrito</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="/acerca">Acerca</a>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="/carrito">
+                            <img src="static/carrito.png" alt="" width="30px" height="30px"><span
+                                class="badge bg-secondary">0</span>
+                        </a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="/" id="navbarDropdown1" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Bienvenido
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown1">
+                            <a class="dropdown-item" href="/login">Iniciar Sesión</a>
+                            <a class="dropdown-item" href="/register">Registrarse</a>
+                            <a class="dropdown-item" href="/logout">Cerrar Sesión</a>
+                        </div>
+                    </li>
+                    <li style="max-width: 200px;">
+                        <form class="form-search content-search navbar-form" action="./" method="post">
+                            <div class="input-group" id="div-src">
+                                <input placeholder="Qué Buscas?" class="form-control form-text" type="text" size="20"
+                                    maxlength="200" height="38px" />
+                                <button class="btn btn-primary button-search" type="submit"
+                                    style="height: 38px;margin-top: auto;">Buscar</button>
+                            </div>
+                        </form>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <br>
+        <br>
+        {% block contenido %}{% endblock %}
+    </div>
+    <script>
+        const $dropdown = $(".dropdown");
+        const $dropdownToggle = $(".dropdown-toggle");
+        const $dropdownMenu = $(".dropdown-menu");
+        const showClass = "show";
+
+        $(window).on("load resize", function () {
+            if (this.matchMedia("(min-width: 768px)").matches) {
+                $dropdown.hover(
+                    function () {
+                        const $this = $(this);
+                        $this.addClass(showClass);
+                        $this.find($dropdownToggle).attr("aria-expanded", "true");
+                        $this.find($dropdownMenu).addClass(showClass);
+                    },
+                    function () {
+                        const $this = $(this);
+                        $this.removeClass(showClass);
+                        $this.find($dropdownToggle).attr("aria-expanded", "false");
+                        $this.find($dropdownMenu).removeClass(showClass);
+                    }
+                );
+            } else {
+                $dropdown.off("mouseenter mouseleave");
+            }
+        });
+    </script>
+    <footer>
+        <div class="line">
+            <div class="about-us">
+                <h3>Acerca de</h3>
+                <ul>
+                    <li><a>Términos y condiciones</a></li>
+                    <li><a>Políticas de privacidad</a></li>
+                    <li><a>© Huehuetlahtolli 2021.</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
